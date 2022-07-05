@@ -4,9 +4,27 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+main {
+  text-align: center;
+}
+
+.threads {
+  border: 1px solid black;
+  width: 1000px;
+  height: 200px;
+  margin: 50px auto;
+}
+
+.threads h3 {
+  text-align: center;
+  background-color: rgb(151, 103, 0);
+  color: white;
+  margin: 0px;
+  padding: 10px 0px;
 }
