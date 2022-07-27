@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { NewThread } from "./pages/NewThread";
 import { Threads } from "./pages/Threads";
+import { ThreadContent } from "./pages/ThreadContent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,6 +16,7 @@ root.render(
         <Route path="/" element={<App />} >
           <Route path="/" element={<Threads />} />
           <Route path="thread/new" element={<NewThread />}/>
+          <Route path="thread/:id" element={<ThreadContent />} />
         </Route>
       </Routes>
     </BrowserRouter>

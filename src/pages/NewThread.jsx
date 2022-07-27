@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./NewThread.css";
+import { useNavigate } from "react-router-dom";
 
 export const NewThread = () => {
+  const navigate = useNavigate();
   const baseURL = "https://railway-react-bulletin-board.herokuapp.com/threads";
   const [title, setTitle] = useState("");
 
@@ -13,7 +15,11 @@ export const NewThread = () => {
         title: title
       })
       .then((res) => {
-        console.log(res);
+        if(res.status === 201) {
+          console.log("投稿しました");
+          console.log(res);
+          navigate("/");
+        }
       })
       .catch((err) => {
         console.log(err);
